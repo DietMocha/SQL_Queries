@@ -1,3 +1,5 @@
+# What customer has paid us the most money
+-- mine
 SELECT
   	cust.first_name,
   	cust.last_name,
@@ -12,5 +14,16 @@ GROUP BY
 ORDER BY
   	revenue DESC
 LIMIT
-	5
+	1
+;
+
+-- Udemy
+SELECT
+  p.customer_id, SUM(p.amount) as revenue
+FROM
+  payment p
+GROUP BY
+  1
+ORDER BY
+  2 DESC
 ;
